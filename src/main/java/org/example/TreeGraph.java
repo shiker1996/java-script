@@ -10,7 +10,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//将列表转换为树并进行可视化
+/**
+ * 将列表转换为树并进行可视化
+ * 你的csv文件中需要包含：当前父节点id，子节点id，父节点名称，子节点名称，子节点属性
+ */
 public class TreeGraph {
 
     static class Node {
@@ -40,13 +43,13 @@ public class TreeGraph {
             String lineTxt;
             while ((lineTxt = br.readLine()) != null) {
                 String[] data = lineTxt.split(",");
-                String id = data[0].trim();
-                String parentId = data[1].trim();
-                String fromMerchantNo = data[2].trim();
-                String toMerchantNo = data[3].trim();
+                String parentId = data[0].trim();
+                String childId = data[1].trim();
+                String parentName = data[2].trim();
+                String childName = data[3].trim();
                 String level = data[4].trim();
-                String amount = data[5].trim();
-                relationships.add(new String[]{parentId, id, fromMerchantNo,toMerchantNo, level, amount});
+                String childProperties = data[5].trim();
+                relationships.add(new String[]{parentId, childId, parentName,childName, level, childProperties});
             }
         } catch (Exception e) {
             System.out.println("导入数据错误");
