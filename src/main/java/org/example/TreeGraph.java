@@ -13,6 +13,7 @@ import java.util.Map;
 /**
  * 将列表转换为树并进行可视化
  * 你的csv文件中需要包含：当前父节点id，子节点id，父节点名称，子节点名称，子节点属性
+ * 注意：父子节点，id不能相同，否则会死循环
  */
 public class TreeGraph {
 
@@ -32,7 +33,9 @@ public class TreeGraph {
     }
 
     public static void main(String[] args) {
-        File file = new File("/Users/001/Downloads/test.csv");
+        ClassLoader classLoader = CompareFiles.class.getClassLoader();
+        String file1Path = classLoader.getResource("tree-graph/test.txt").getPath();
+        File file = new File(file1Path);
         if (!file.isFile() || !file.exists()) {
             System.out.println("文件不存在!");
             return;
