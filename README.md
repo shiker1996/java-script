@@ -16,7 +16,14 @@
         │   └── 子节点5(1)
         └── 子节点5(1)
    ```
-2. `CompareFiles`: 比较两个json大文件中不一致的json行，在忽略指定不校验字段的情况下，通过滑动窗口的方式进行比较，最后输出不一致的json行总数，并打印出不一致的文本行及其最匹配的结果，只打印前5条
+2. `CompareFiles`: 比较两个大文件中不一致的文本行，通过滑动窗口的方式进行比较，最后输出不一致的文本行总数，并打印住不一致的文本行和其最匹配的结果，只打印前5条
+   ```
+   查询不一致的数据条数: 1
+   新文件中查询不到的数据为: 	at org.example.CompareFiles.compareFiles(CompareFiles.java:35)
+   在新文件中匹配到的数据为: 	at org.example.CompareFiles.main(CompareFiles.java:27)
+   在新文件中不一致的字段为: 	at org.example.CompareFiles.**************************
+   ```
+3. `CompareJsonFiles`: 比较两个json大文件中不一致的json行，在忽略指定不校验字段的情况下，通过滑动窗口的方式进行比较，最后输出不一致的json行总数，并打印出不一致的文本行及其最匹配的结果，只打印前5条
     ```
     查询不一致的数据条数: 3
     新文件中查询不到的数据为: {"id":"7","name":"zhangbeihai","score":"17","teacher":"santi"}

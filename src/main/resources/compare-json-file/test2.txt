@@ -1,0 +1,8 @@
+{"id":"1","name":"zhangsan","score":"11","teacher":"liucixin"}
+{"id":"2","name":"lisi","score":"12","teacher":"guofan"}
+{"id":"3","name":"wangwu","score":"13","teacher":"ETO"}
+{"id":"4","name":"zhaoliu","score":"14","teacher":"yiwensi"}
+{"id":"5","name":"liyiyi","score":"15","teacher":"yewenjie"}
+{"id":"6","name":"luoji","score":"16","teacher":""}
+{"id":"7","name":"zhangbeihai","score":"17","teacher":""}
+{"id":"8","name":"luoxing","score":"18","teacher":""}

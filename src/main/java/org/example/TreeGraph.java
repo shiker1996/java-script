@@ -33,7 +33,7 @@ public class TreeGraph {
     }
 
     public static void main(String[] args) {
-        ClassLoader classLoader = CompareFiles.class.getClassLoader();
+        ClassLoader classLoader = CompareJsonFiles.class.getClassLoader();
         String file1Path = classLoader.getResource("tree-graph/test.txt").getPath();
         File file = new File(file1Path);
         if (!file.isFile() || !file.exists()) {
